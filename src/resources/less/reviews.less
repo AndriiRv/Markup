@@ -1,0 +1,95 @@
+@media screen and (max-width: 800px) {
+
+  #reviews {
+    width: auto;
+  }
+
+  #reviews-companies-flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#reviews {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 0 80px 0;
+
+  font-family: Roboto Slab, serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+
+  #reviews-companies-flex-container {
+    display: flex;
+
+    .reviews-company {
+      padding-top: 50px;
+      height: 50px;
+      flex-grow: 1;
+    }
+
+    #reviews-company-1 {
+      background: url('../images/reviews/logo1.jpg') no-repeat center center;
+
+      &:hover {
+        background: url('../images/reviews/logo1.1.jpg') no-repeat center center;
+      }
+    }
+
+    #reviews-company-2 {
+      background: url('../images/reviews/logo2.jpg') no-repeat center center;
+
+      &:hover {
+        background: url('../images/reviews/logo2.1.jpg') no-repeat center center;
+      }
+    }
+
+    #reviews-company-3 {
+      background: url('../images/reviews/logo3.jpg') no-repeat center center;
+
+      &:hover {
+        background: url('../images/reviews/logo3.1.jpg') no-repeat center center;
+      }
+    }
+
+    #reviews-company-4 {
+      background: url('../images/reviews/logo4.jpg') no-repeat center center;
+
+      &:hover {
+        background: url('../images/reviews/logo4.1.jpg') no-repeat center center;
+      }
+    }
+
+    #reviews-company-5 {
+      background: url('../images/reviews/logo5.jpg') no-repeat center center;
+
+      &:hover {
+        background: url('../images/reviews/logo5.1.jpg') no-repeat center center;
+      }
+    }
+  }
+
+  #review-navigation {
+    display: flex;
+    justify-content: center;
+  }
+
+  #selected-review {
+    background-color: #c0301c;
+    border-radius: 50%;
+  }
+
+  .reviews-drop-downs {
+    width: 13px;
+    height: 13px;
+    margin: 40px 7px 0;
+    background-color: #dddddd;
+    border-radius: 50%;
+  }
+}
