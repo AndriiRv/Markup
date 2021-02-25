@@ -5,12 +5,12 @@ array = [
     document.getElementsByClassName("member-in-about-us-4")[0]
 ];
 
-document.getElementById("next-button").onclick = function () {
+document.getElementsByClassName("next-button")[0].onclick = function () {
     nextImg();
     applySort();
 }
 
-document.getElementById("prev-button").onclick = function () {
+document.getElementsByClassName("prev-button")[0].onclick = function () {
     prevImg();
     applySort();
 }

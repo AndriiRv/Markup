@@ -2,7 +2,7 @@
 
 @media screen and (max-width: @max-mobile-width) {
 
-  #welcome-block-flex-container {
+  .welcome-block-flex-container {
     justify-content: flex-end;
     padding-right: 5%;
 
@@ -12,22 +12,29 @@
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 23px;
   }
 }
 
 @media screen and (min-width: @min-tablet-width) {
 
-  #welcome-block-flex-container {
+  .welcome-block-flex-container {
     justify-content: space-around;
-  }
-
-  h3 {
-    font-size: 23px;
   }
 
   .mobile-header-welcome-block {
     display: none;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: @min-desktop-width) {
+
+  h3 {
+    font-size: 20px;
   }
 }
 
@@ -45,7 +52,7 @@
   position: relative;
 }
 
-#welcome-block {
+.welcome-block {
   position: relative;
   color: @text-color;
 
@@ -73,6 +80,11 @@
 
   .logo {
     padding: 0 15px;
+
+    p {
+      margin: 0;
+      font-size: 30px;
+    }
   }
 
   h1 {
@@ -83,17 +95,11 @@
   h3 {
     font-family: Montserrat, serif;
     font-weight: normal;
-
     line-height: 1.2;
-
-    //font-size: 20px;
+    padding-bottom: 30px;
   }
 
-  .main-button {
-    margin: 50px 15px 15px 15px;
-  }
-
-  #welcome-block-flex-container {
+  .welcome-block-flex-container {
     display: flex;
     padding: 30px;
     align-items: center;
@@ -104,10 +110,9 @@
     }
   }
 
-  #welcome-label-block {
-    display: flex;
+  .welcome-label-block {
+    display: block;
     align-items: center;
-    flex-direction: column;
 
     position: absolute;
     top: 40%;
