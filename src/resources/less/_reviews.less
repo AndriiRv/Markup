@@ -1,7 +1,12 @@
-@media screen and (max-width: 800px) {
+@import "_globalPreferences.less";
+
+@media screen and (max-width: @max-tablet-width) {
 
   #reviews {
     width: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 80px 15px 80px 15px;
   }
 
   #reviews-companies-flex-container {
@@ -10,12 +15,20 @@
   }
 }
 
+@media screen and (min-width: @min-desktop-width) {
+
+  #reviews {
+    width: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+  }
+}
+
 #reviews {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   text-align: center;
-  padding: 80px 0 80px 0;
 
   font-family: Roboto Slab, serif;
   font-size: 20px;

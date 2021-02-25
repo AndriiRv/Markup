@@ -1,10 +1,28 @@
+@import "_globalPreferences.less";
+
 @red-color: #c0301c;
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: @min-desktop-width) {
 
   #blog-posts {
     width: auto;
-    font-size: 5vw;
+    margin: 80px auto 80px auto;
+
+    padding: 0 15px;
+  }
+
+  .blog-posts-image {
+    display: block;
+    min-width: 464px;
+  }
+}
+
+@media screen and (max-width: @max-tablet-width) {
+
+  #blog-posts {
+    width: auto;
+    font-size: 14px;
+    margin: 80px 15px 80px 15px;
   }
 
   .blog-posts-image {
@@ -12,29 +30,35 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: @max-mobile-width) {
 
   #blog-posts {
-    font-size: 14px;
-    padding: 80px 0 80px 0;
+    width: auto;
+    margin: 80px 15px 80px 15px;
+  }
+
+  .blog-posts-image {
+    display: none;
   }
 }
 
 #blog-posts {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   text-align: center;
 
-  font-family: Roboto Slab, serif;
+  font-family: "Roboto Slab", serif;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.8;
   letter-spacing: normal;
 
-  .highlighted-word {
-    color: @red-color;
+  .hover-highlighted-word {
+
+    &:hover {
+      color: @red-color;
+    }
   }
 
   h2 {
@@ -64,6 +88,10 @@
     font-weight: bold;
 
     text-align: center;
+  }
+
+  #header-blog-posts {
+    padding: 30px;
   }
 
   #blog-posts-flex-container {

@@ -1,0 +1,122 @@
+@import "_globalPreferences.less";
+
+@media screen and (max-width: @max-mobile-width) {
+
+  #welcome-block-flex-container {
+    justify-content: flex-end;
+    padding-right: 5%;
+
+    .logo, .header-welcome-block {
+      display: none;
+    }
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: @min-tablet-width) {
+
+  #welcome-block-flex-container {
+    justify-content: space-around;
+  }
+
+  h3 {
+    font-size: 23px;
+  }
+
+  .mobile-header-welcome-block {
+    display: none;
+  }
+}
+
+.background-welcome-block {
+  background: url('../images/welcomeBlock/bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+#welcome-block {
+  position: relative;
+  color: @text-color;
+
+  font-family: 'Montserrat', serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+
+  line-height: 1.5;
+  letter-spacing: normal;
+
+  a {
+    color: @text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  nav a {
+    padding: 15px;
+  }
+
+  .logo {
+    padding: 0 15px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 48px;
+  }
+
+  h3 {
+    font-family: Montserrat, serif;
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    //font-size: 20px;
+  }
+
+  .main-button {
+    margin: 50px 15px 15px 15px;
+  }
+
+  #welcome-block-flex-container {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+
+    .header-welcome-block {
+      font-size: 16px;
+      padding: 0 15px;
+    }
+  }
+
+  #welcome-label-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+    top: 40%;
+
+    text-align: center;
+    width: 100%;
+
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: @text-color;
+  }
+}

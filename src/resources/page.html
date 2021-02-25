@@ -1,65 +1,77 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="en">
 <head>
   <title>Startup</title>
-  <meta name="description" content="Makeup of web-page">
+  <meta name="description" content="Mark up of web-page">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet/less" href="less/common.less">
-  <link rel="stylesheet/less" href="less/menu.less">
-  <link rel="stylesheet/less" href="less/welcomeBlock.less">
-  <link rel="stylesheet/less" href="less/services.less">
-  <link rel="stylesheet/less" href="less/aboutUs.less">
-  <link rel="stylesheet/less" href="less/latestWorks.less">
-  <link rel="stylesheet/less" href="less/contactUs.less">
-  <link rel="stylesheet/less" href="less/blogPosts.less">
-  <link rel="stylesheet/less" href="less/reviews.less">
-  <link rel="stylesheet/less" href="less/footer.less">
+  <link rel="stylesheet" href="fonts/robotoslab.css">
+  <link rel="stylesheet" href="fonts/montserrat.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.1.1/less.min.js"
-          integrity="sha512-mE4RWRhILuNDWPx8sl5Q739XNbibSUZP9dEjdepzpYVw1kDco9ZZ5l/+KHAMffzXNHnmSWexMSN+OX137tNL5A=="
-          crossorigin="anonymous"></script>
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<div id="welcome-block">
-  <div id="welcome-block-flex-container">
-    <div class="header-welcome-block">
-      <p>Startup</p>
-    </div>
-    <nav id="navigation" class="header-welcome-block">
-      <a href="">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about-us">About</a>
-      <a href="#latest-works">Works</a>
-      <a href="#blog-posts">Blog</a>
-      <a href="#reviews">Clients</a>
-      <a href="#contact-us-end">Contact</a>
-    </nav>
-    <div id="navigation-mobile" onclick="enableMenu(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-  </div>
-  <div id="welcome-label-block">
-    <h1>WELCOME TO STARTUP</h1>
-    <h3>Your Favourite Creative Agency Template</h3>
-    <button class="main-button" value="">GET STARTED</button>
-  </div>
+<div class="back-to-top-block">
+  <a href="#" class="back-to-top"></a>
 </div>
 
-<div id="services" class="default-block">
+<div class="background-welcome-block">
+  <article id="welcome-block">
+    <div id="welcome-block-flex-container">
+
+      <div class="logo">
+        <p>Startup</p>
+      </div>
+
+      <nav class="header-welcome-block">
+        <a href="">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about-us">About</a>
+        <a href="#latest-works">Works</a>
+        <a href="#blog-posts">Blog</a>
+        <a href="#reviews">Clients</a>
+        <a href="#contact-us-end">Contact</a>
+      </nav>
+
+      <nav class="mobile-header-welcome-block" role="navigation">
+        <div id="mobile-menu">
+          <label for="open-close-menu-button"></label>
+          <input id="open-close-menu-button" type="checkbox"/>
+          <span></span><span></span><span></span>
+          <ul id="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#latest-works">Works</a></li>
+            <li><a href="#blog-posts">Blog</a></li>
+            <li><a href="#reviews">Clients</a></li>
+            <li><a href="#contact-us-end">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div id="welcome-label-block">
+      <h1>WELCOME TO STARTUP</h1>
+      <h3>Your Favourite Creative Agency Template</h3>
+      <a class="main-button" href="#services">
+        <button value="">GET STARTED</button>
+      </a>
+    </div>
+
+  </article>
+</div>
+
+<article id="services">
+
   <div id="header-services" class="header-of-block">
     <h2>SERVICES</h2>
     <div class="horizontal-line"></div>
     <h4>We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</h4>
   </div>
+
   <div id="services-flex-container">
     <div class="flex-block">
       <div id="services-image-1" class="services-image"></div>
@@ -80,17 +92,20 @@
         harum ex magni, dicta impedit. Lorem ipsum.</p>
     </div>
   </div>
-</div>
+
+</article>
 
 <div class="grey-background-block">
-  <div id="about-us" class="default-block">
+  <article id="about-us">
+
     <div id="header-about-us" class="header-of-block">
       <h2>ABOUT US</h2>
       <div class="horizontal-line"></div>
       <h4>We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</h4>
     </div>
+
     <div id="about-us-flex-container">
-      <div class="about-us-detail">
+      <div class="about-us-content">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut
           labore
           et
@@ -99,46 +114,61 @@
           kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore
           aliquyam
           erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut
+          labore
+          et
+          dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet
+          clita
+          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore
+          aliquyam
+          erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.</p>
+      </div>
+
+      <div class="about-us-detail">
         <div class="about-us-flex-block">
-          <div id="member-in-about-us-1" class="member-in-about-us">
+          <div id="prev-button" class="prev-next-img-block">
+            <img class="prev-img" src="images/slider/prevWhite.png" alt="Next image"/>
+          </div>
+          <div class="member-in-about-us-1">
             <div id="about-us-image-1" class="about-us-image"></div>
-            <h5>MD. KHALIL UDDIN</h5>
-            <h6>Head of Ideas</h6>
+            <div class="about-us-author">
+              <h5>MD. KHALIL UDDIN</h5>
+              <h6>Head of Ideas</h6>
+            </div>
           </div>
-          <div id="member-in-about-us-2" class="member-in-about-us">
+          <div class="member-in-about-us-2">
             <div id="about-us-image-2" class="about-us-image"></div>
-            <h5>RUBEL MIAH</h5>
-            <h6>Lead WordPress Developer</h6>
+            <div class="about-us-author">
+              <h5>RUBEL MIAH</h5>
+              <h6>Lead WordPress Developer</h6>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="about-us-detail">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut
-          labore
-          et
-          dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet
-          clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore
-          aliquyam
-          erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.</p>
-        <div class="about-us-flex-block">
-          <div id="member-in-about-us-3" class="member-in-about-us">
+          <div class="member-in-about-us-3">
             <div id="about-us-image-3" class="about-us-image"></div>
-            <h5>SHAMIM MIA</h5>
-            <h6>Sr. Web Developer</h6>
+            <div class="about-us-author">
+              <h5>SHAMIM MIA</h5>
+              <h6>Sr. Web Developer</h6>
+            </div>
           </div>
-          <div id="member-in-about-us-4" class="member-in-about-us">
+          <div class="member-in-about-us-4">
             <div id="about-us-image-4" class="about-us-image"></div>
-            <h5>JOHN DOE</h5>
-            <h6>Front-end Developer</h6>
+            <div class="about-us-author">
+              <h5>JOHN DOE</h5>
+              <h6>Front-end Developer</h6>
+            </div>
+          </div>
+          <div id="next-button" class="prev-next-img-block">
+            <img class="next-img" src="images/slider/nextWhite.png" alt="Next image"/>
           </div>
         </div>
       </div>
+
     </div>
-  </div>
+  </article>
 </div>
 
-<div id="latest-works" class="default-block">
+<article id="latest-works">
+
   <div id="header-latest-works" class="header-of-block">
     <h2>LATEST WORKS</h2>
     <div class="horizontal-line"></div>
@@ -150,47 +180,113 @@
       <a href="/startup/strategy">Strategy</a>
     </nav>
   </div>
+
   <div id="latest-work-grid-container">
-    <div id="latest-work-image-block1" class="latest-work-image-block">
-      <div class="selected-latest-work">
-        <p class="header-latest-work">Hair Dresser</p>
-        <p>Branding</p>
-        <button>VIEW ></button>
+    <div class="latest-work-image-block1 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">Morning Madness</h3>
+          <p>Branding</p>
+          <button>VIEW ></button>
+        </div>
       </div>
     </div>
-    <div id="latest-work-image-block2" class="latest-work-image-block">
+    <div class="latest-work-image-block2 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">Present</h3>
+          <p>Design</p>
+          <button>VIEW ></button>
+        </div>
+      </div>
     </div>
-    <div id="latest-work-image-block3" class="latest-work-image-block">
+    <div class="latest-work-image-block3 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">Stylish</h3>
+          <p>Development</p>
+          <button>VIEW ></button>
+        </div>
+      </div>
     </div>
-    <div id="latest-work-image-block4" class="latest-work-image-block">
+    <div class="latest-work-image-block4 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">Let's take a selfie</h3>
+          <p>Design</p>
+          <button>VIEW ></button>
+        </div>
+      </div>
     </div>
-    <div id="latest-work-image-block5" class="latest-work-image-block">
+    <div class="latest-work-image-block5 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">We are bounce or we update your instagram account?</h3>
+          <p>Branding</p>
+          <button>VIEW ></button>
+        </div>
+      </div>
     </div>
-    <div id="latest-work-image-block6" class="latest-work-image-block">
+    <div class="latest-work-image-block6 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">Idea</h3>
+          <p>Strategy</p>
+          <button>VIEW ></button>
+        </div>
+      </div>
     </div>
-    <div id="latest-work-image-block7" class="latest-work-image-block">
+    <div class="latest-work-image-block7 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">When you check your vision?</h3>
+          <p>Strategy</p>
+          <button>VIEW ></button>
+        </div>
+      </div>
     </div>
-    <div id="latest-work-image-block8" class="latest-work-image-block">
+    <div class="latest-work-image-block8 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">Art</h3>
+          <p>Design</p>
+          <button>VIEW ></button>
+        </div>
+      </div>
     </div>
-    <div id="latest-work-image-block9" class="latest-work-image-block">
+    <div class="latest-work-image-block9 latest-work-image">
+      <div class="latest-work-image-colored-background-block">
+        <div class="image-content">
+          <h3 class="header-latest-work">Don't miss your event</h3>
+          <p>Branding</p>
+          <button>VIEW ></button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+
+</article>
 
 <div id="contact-us-begin">
-  <div id="contact-us-block">
-    <p>Do you like OUR WORK so far?</p>
-    <p>Let's talk about YOUR PROJECT!</p>
+  <div class="contact-us-begin-background-block">
+    <div id="contact-us-block">
+      <p>Do you like OUR WORK so far?</p>
+      <p>Let's talk about YOUR PROJECT!</p>
+    </div>
+    <a href="#contact-us-end">
+      <button class="main-button" value="">GET IN TOUCH</button>
+    </a>
   </div>
-  <button class="main-button">GET IN TOUCH</button>
 </div>
 
-<div id="blog-posts" class="default-block">
+<article id="blog-posts">
+
   <div id="header-blog-posts" class="header-of-block">
     <h2>RECENT BLOG POSTS</h2>
     <div class="horizontal-line"></div>
     <h4>We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</h4>
   </div>
+
   <div id="blog-posts-flex-container">
     <div class="blog-posts-flex-block">
       <div id="blog-posts-block1" class="blog-posts-image"></div>
@@ -198,9 +294,9 @@
         <div class="top-inner-blog-post">
           <div class="date-in-square">18 OCT</div>
           <div class="header-of-post">
-            <p id="header-text">STARTUP IDEAS NEEDS TO BE FUNDED</p>
-            <p><i>By <span class="highlighted-word">Khalil</span> Uddin in <span
-                    class="highlighted-word">Development</span></i></p>
+            <p><span class="hover-highlighted-word">STARTUP IDEAS NEEDS TO BE FUNDED</span></p>
+            <p><i>By <span class="hover-highlighted-word">Khalil</span> Uddin in <span
+                    class="hover-highlighted-word">Development</span></i></p>
           </div>
         </div>
         <div class="down-inner-blog-post">
@@ -220,8 +316,9 @@
           <div class="top-inner-blog-post">
             <div class="date-in-square">18 OCT</div>
             <div class="header-of-post">
-              <p>USER INTERFACE DESIGNING ELEMENTS</p>
-              <p><i>By Khalil Uddin in Development</i></p>
+              <p><span class="hover-highlighted-word">USER INTERFACE DESIGNING ELEMENTS</span></p>
+              <p><i>By <span class="hover-highlighted-word">Khalil</span> Uddin in <span
+                      class="hover-highlighted-word">Development</span></i></p>
             </div>
           </div>
           <div class="down-inner-blog-post">
@@ -240,10 +337,11 @@
       </div>
     </div>
   </div>
-</div>
+
+</article>
 
 <div class="grey-background-block">
-  <div id="reviews" class="default-block">
+  <article id="reviews">
     <div id="reviews-companies-flex-container">
       <div id="reviews-company-1" class="reviews-company"></div>
       <div id="reviews-company-2" class="reviews-company"></div>
@@ -262,23 +360,26 @@
       <div class="reviews-drop-downs"></div>
       <div class="reviews-drop-downs"></div>
     </div>
-  </div>
+  </article>
 </div>
 
-<div id="contact-us-end" class="default-block">
+<article id="contact-us-end">
+
   <div id="header-contact-us-end" class="header-of-block">
     <h2>GET IN TOUCH</h2>
     <div class="horizontal-line"></div>
     <h4>We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</h4>
   </div>
+
   <div id="contact-us-end-container">
+
     <div id="contact-us-info">
       <div id="address-contact-us-end" class="inner-contact-us-end">
         <div id="contact-us-end-address-image1" class="about-us-image"></div>
         <div class="inner-contact-us-end-content">
           <p class="header-of-contact-us">ADDRESS</p>
-          <p>312, 7th Ave, New York</p>
-          <p> NY 101200, United States of America</p>
+          <address>312, 7th Ave, New York</address>
+          <address> NY 101200, United States of America</address>
         </div>
       </div>
       <div class="inner-contact-us-end">
@@ -298,25 +399,32 @@
         </div>
       </div>
     </div>
+
     <div id="customer-input-fields-flex-container">
-      <div class="customer-input-fields-flex-block">
-        <label class="customer-input"><input type="text" placeholder="YOUR NAME"/></label>
-        <label class="customer-input"><input type="text" placeholder="YOUR E-MAIL"/></label>
-      </div>
-      <div class="customer-input-fields-flex-block">
-        <label class="customer-input"><input type="text" placeholder="YOUR SUBJECT"/></label>
-        <label class="customer-input"><input type="text" placeholder="COMPANY NAME"/></label>
-      </div>
-      <div class="customer-input-fields-flex-block">
-        <label class="customer-input"><textarea placeholder="WRITE YOUR MESSAGE"></textarea></label>
-      </div>
-      <div id="customer-input-fields-button" class="customer-input-fields-flex-block">
-        <button class="customer-input" type="submit">SEND MESSAGE</button>
-        <h6>* We’ll contact you as as possible. We don’t reply on Monday.</h6>
-      </div>
+      <form action="/" method="post">
+        <div class="customer-input-fields-flex-block">
+          <label class="customer-input"><input type="text" placeholder="YOUR NAME"/></label>
+          <label class="customer-input"><input type="email" placeholder="YOUR E-MAIL"/></label>
+        </div>
+        <div class="customer-input-fields-flex-block">
+          <label class="customer-input"><input type="text" placeholder="YOUR SUBJECT"/></label>
+          <label class="customer-input"><input type="text" placeholder="COMPANY NAME"/></label>
+        </div>
+        <div class="customer-input-fields-flex-block">
+          <label class="customer-input"><input class="input-textarea" type="text"
+                                               placeholder="WRITE YOUR MESSAGE"/></label>
+        </div>
+        <div id="customer-input-fields-button" class="customer-input-fields-flex-block">
+          <button id="send-message-button" class="customer-input" type="submit">SEND MESSAGE</button>
+          <h5><span class="highlight">*</span> We’ll contact you as soon as possible. We don’t reply on Monday.
+          </h5>
+        </div>
+      </form>
     </div>
+
   </div>
-</div>
+
+</article>
 
 <footer>
   <div id="header-footer" class="header-of-block">
@@ -327,6 +435,7 @@
 </footer>
 
 <script src="js/menu.js"></script>
+<script src="js/slider.js"></script>
 
 </body>
 </html>

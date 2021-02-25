@@ -1,0 +1,134 @@
+@import "_globalPreferences.less";
+
+@red-color: #c0301c;
+
+@media screen and (max-width: 1200px) {
+
+  #about-us {
+    width: auto;
+  }
+
+  .member-in-about-us-4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: @max-tablet-width) {
+
+  #about-us {
+    width: auto;
+  }
+
+  .member-in-about-us-2, .member-in-about-us-3, .member-in-about-us-4 {
+    display: none;
+  }
+
+  #about-us-flex-container, .about-us-content {
+    flex-direction: column;
+  }
+
+  .about-us-detail {
+    width: auto;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+@media screen and (min-width: @min-desktop-width) {
+
+  #about-us {
+    margin: 80px auto 80px auto;
+  }
+}
+
+#about-us {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+
+  font-family: Roboto Slab, serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+
+  #header-about-us {
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    font-family: Montserrat, serif;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  p {
+    padding: 0 15px 50px 15px;
+    text-align: justify;
+  }
+
+  .about-us-flex-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us-content {
+    display: flex;
+  }
+
+  #about-us-image-1 {
+    background: url('../images/aboutUs/img1.jpg');
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #about-us-image-2 {
+    background: url('../images/aboutUs/img2.jpg');
+  }
+
+  #about-us-image-3 {
+    background: url('../images/aboutUs/img3.jpg');
+  }
+
+  #about-us-image-4 {
+    background: url('../images/aboutUs/img4.jpg');
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .prev-next-img-block {
+    background-color: @red-color;
+    width: 35px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: red;
+      cursor: pointer;
+    }
+  }
+
+  #about-us-flex-container {
+    //display: flex;
+    gap: 50px;
+
+    .about-us-image {
+      margin: 0 auto;
+      height: 250px;
+      width: 263px;
+    }
+  }
+}

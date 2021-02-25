@@ -1,11 +1,13 @@
-@media screen and (max-width: 800px) {
+@import "_globalPreferences.less";
+
+@media screen and (max-width: @min-desktop-width) {
 
   #header-footer {
-    font-size: 5vw;
+    //font-size: 5vw;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: @min-desktop-width) {
 
   #header-footer {
     font-size: 12px;

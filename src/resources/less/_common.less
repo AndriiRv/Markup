@@ -1,15 +1,6 @@
+@import "_globalPreferences.less";
+
 @red-color: #c0301c;
-
-@media screen and (max-width: 800px) {
-
-  .header-of-block {
-    font-size: 5vw;
-  }
-
-  .default-block {
-    padding: 80px 10px;
-  }
-}
 
 html, body {
   height: 100%;
@@ -37,14 +28,16 @@ button {
 
   font-family: Montserrat, sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.5;
   letter-spacing: normal;
 
   &:hover {
-    border-color: @red-color;
+    border-color: white;
+    color: @red-color;
+    background-color: white;
   }
 }
 
@@ -55,8 +48,10 @@ button {
   margin: 0 auto;
 }
 
-.default-block {
+article {
+  max-width: 1200px;
   width: 1200px;
+  margin: 0 15px 0 15px;
 }
 
 .grey-background-block {
