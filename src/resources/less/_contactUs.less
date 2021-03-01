@@ -1,6 +1,5 @@
 @import "_globalPreferences.less";
-
-@red-color: #c0301c;
+@import "_common.less";
 
 @media screen and (max-width: @min-desktop-width) {
 
@@ -29,7 +28,6 @@
   a {
     color: @text-color;
     text-decoration: none;
-    padding: 15px;
 
     &:hover {
       text-decoration: underline;
@@ -40,9 +38,8 @@
     width: 100%;
     height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .flex-align-content-in-block();
+
     flex-direction: column;
 
     background-color: rgba(192, 48, 28, .5);

@@ -1,7 +1,5 @@
 @import "_globalPreferences.less";
 
-@red-color: #c0301c;
-
 html, body {
   height: 100%;
   scroll-behavior: smooth;
@@ -41,13 +39,17 @@ button {
   }
 }
 
-article {
-  max-width: 1200px;
-  width: 1200px;
+section {
+  max-width: @width-main-content;
+  width: @width-main-content;
   margin: 0 15px 0 15px;
 }
 
-.flex-align-content-in-block(){
+.image-content {
+  display: none;
+}
+
+.flex-align-content-in-block() {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,11 +1,25 @@
-document.getElementById("mobile-menu").onclick = function () {
-    let isMenuOpen = true;
-    let ul = document.getElementById('menu');
+$(document).ready(function () {
 
-    ul.addEventListener('click', function () {
-        if (isMenuOpen) {
-            document.getElementById("open-close-menu-button").click();
-            isMenuOpen = false;
+    let bodySelector = $("body");
+    let menuButton = $("#open-close-menu-button");
+    let ul = $("#menu");
+
+    let isOpen = true;
+
+    menuButton.on('click', function () {
+        if (isOpen) {
+            bodySelector.css("overflow", "hidden");
+            isOpen = false;
+        } else {
+            bodySelector.css("overflow", "auto");
+            isOpen = true;
         }
+
+        ul.on('click', function () {
+            menuButton.click();
+            bodySelector.css("overflow", "auto");
+
+            isOpen = true;
+        });
     });
-}
+});
