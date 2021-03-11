@@ -3,43 +3,39 @@
     $.fn.slider = function (params) {
         let isNextImageTrigger = params[0];
 
-        let array = this.map(function () {
-            return this;
-        }).get();
+        let aboutUsBlocks = this;
 
         if (isNextImageTrigger) {
-            let tempFirstSelector = array[0];
+            let tempFirstSelector = aboutUsBlocks[0];
 
-            for (let i = 0; i < array.length; i++) {
-                if (i >= array.length - 1) {
-                    array[array.length - 1] = tempFirstSelector;
+            for (let i = 0; i < aboutUsBlocks.length; i++) {
+                if (i >= aboutUsBlocks.length - 1) {
+                    aboutUsBlocks[aboutUsBlocks.length - 1] = tempFirstSelector;
                     break;
                 }
 
-                array[i] = array[i + 1];
+                aboutUsBlocks[i] = aboutUsBlocks[i + 1];
             }
-
-            applySort();
         } else {
-            let tempLastSelector = array[array.length - 1];
-            for (let i = array.length - 1; i >= 0; i--) {
+            let tempLastSelector = aboutUsBlocks[aboutUsBlocks.length - 1];
+            for (let i = aboutUsBlocks.length - 1; i >= 0; i--) {
                 if (i === 0) {
-                    array[0] = tempLastSelector;
+                    aboutUsBlocks[0] = tempLastSelector;
                     break;
                 }
-                array[i] = array[i - 1];
+                aboutUsBlocks[i] = aboutUsBlocks[i - 1];
             }
-
-            applySort();
         }
 
+        applySort();
+
         function applySort() {
-            for (let i = 0; i < array.length; i++) {
-                let classElement = array[i].classList[0];
+            for (let i = 0; i < aboutUsBlocks.length; i++) {
+                let classElement = aboutUsBlocks[i].classList[0];
 
                 let stringBuilder = '<div class="' + classElement + '">';
-                for (let j = 0; j < array[i].children.length; j++) {
-                    stringBuilder += array[i].children[j].outerHTML;
+                for (let j = 0; j < aboutUsBlocks[i].children.length; j++) {
+                    stringBuilder += aboutUsBlocks[i].children[j].outerHTML;
                 }
                 stringBuilder += '</div>';
 
@@ -53,9 +49,7 @@
     $.fn.resizeSlider = function (countShowElement, imageSelector) {
         let selector = $("." + imageSelector);
 
-        let array = selector.map(function () {
-            return this;
-        }).get();
+        let array = selector;
 
         let countOfUnnecessaryImages;
 
@@ -118,9 +112,7 @@ $(document).ready(function () {
     function resizeSliderByWidthOfScreen(imageSelector) {
         let selector = $("." + imageSelector);
 
-        let array = selector.map(function () {
-            return this;
-        }).get();
+        let array = selector;
 
         let countOfUnnecessaryImages;
 

@@ -9,6 +9,13 @@
   }
 }
 
+@media screen and (min-width: @min-desktop-width) {
+
+  .about-us-content {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: @max-tablet-width) {
 
   #about-us {
@@ -21,6 +28,10 @@
 
     h4 {
       font-size: 16px;
+    }
+
+    .about-us-content {
+      display: block;
     }
   }
 
@@ -57,6 +68,7 @@
   .social-network {
     width: 30px;
     height: 30px;
+    cursor: pointer;
 
     .flex-align-content-in-block();
 
@@ -92,12 +104,20 @@
     }
   }
 
-  .about-us-detail {
-    .flex-align-content-in-block();
+  .prev-about-us {
+    position: relative;
+    left: 35px;
+    bottom: 45px;
   }
 
-  .about-us-content {
-    display: flex;
+  .next-about-us {
+    position: relative;
+    right: 35px;
+    bottom: 45px;
+  }
+
+  .about-us-detail {
+    .flex-align-content-in-block();
   }
 
   .about-us-image-1 {
@@ -117,7 +137,6 @@
   }
 
   .about-us-flex-container {
-    gap: 50px;
 
     .about-us-image {
       margin: 0 auto;

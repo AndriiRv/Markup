@@ -2,51 +2,69 @@
 
     $.fn.sortImages = function (params) {
         let defaultTypeOfImage = params[0];
-        let typeOfImage = params[1];
+        let selectedTypeOfImage = params[1];
+        let dataLatestWorkImageType = params[2];
 
-        let array = this.map(function () {
-            return this;
-        }).get();
+        let latestWorkImages = this;
 
-        if (defaultTypeOfImage !== typeOfImage) {
-            for (let i = 0; i < array.length; i++) {
-                this.eq(i).show();
-            }
-        }
-
-        for (let i = 0; i < array.length; i++) {
-            let outerHTML = array[i].outerHTML.toLowerCase();
-            if (typeOfImage === defaultTypeOfImage) {
-                this.eq(i).show();
-            } else if (!outerHTML.includes(typeOfImage)) {
-                this.eq(i).hide();
-            }
-        }
+        showAllImages(latestWorkImages);
+        hideNotWantedImage(latestWorkImages, defaultTypeOfImage, selectedTypeOfImage, dataLatestWorkImageType);
 
         return this;
     };
 
+    function showAllImages(latestWorkImages) {
+        for (let i = 0; i < latestWorkImages.length; i++) {
+            latestWorkImages.eq(i).show();
+        }
+    }
+
+    function hideNotWantedImage(latestWorkImages, defaultTypeOfImage, selectedTypeOfImage, dataLatestWorkImageType) {
+        let isSelectedDefaultTypeImage = defaultTypeOfImage === selectedTypeOfImage;
+
+        if (!isSelectedDefaultTypeImage) {
+            for (let i = 0; i < latestWorkImages.length; i++) {
+                if (selectedTypeOfImage !== latestWorkImages.eq(i).attr(dataLatestWorkImageType)) {
+                    latestWorkImages.eq(i).hide();
+                }
+            }
+        }
+    }
+
+
 }(jQuery));
 
 $(document).ready(function () {
+    let latestWorkImageBlock = $(".latest-work-image");
+    let defaultTypeOfImage = "all-images";
+    let dataLatestWorkImageType = "data-latest-work-image-type";
+    let specificRedColor = "#c0301c";
+
+    let anchorsInHeaderLatestWorks = $(".header-latest-works").children().children();
 
     $(".all-images").on("click", function () {
-        $(".latest-work-image").sortImages(["all-images", this.className]);
+        sortImagesWithActiveNavigation($(this), defaultTypeOfImage, dataLatestWorkImageType);
     });
 
     $(".branding").on("click", function () {
-        $(".latest-work-image").sortImages(["all-images", this.className]);
+        sortImagesWithActiveNavigation($(this), defaultTypeOfImage, dataLatestWorkImageType);
     });
 
     $(".design").on("click", function () {
-        $(".latest-work-image").sortImages(["all-images", this.className]);
+        sortImagesWithActiveNavigation($(this), defaultTypeOfImage, dataLatestWorkImageType);
     });
 
     $(".development").on("click", function () {
-        $(".latest-work-image").sortImages(["all-images", this.className]);
+        sortImagesWithActiveNavigation($(this), defaultTypeOfImage, dataLatestWorkImageType);
     });
 
     $(".strategy").on("click", function () {
-        $(".latest-work-image").sortImages(["all-images", this.className]);
+        sortImagesWithActiveNavigation($(this), defaultTypeOfImage, dataLatestWorkImageType);
     });
+
+    function sortImagesWithActiveNavigation(that, defaultTypeOfImage, dataLatestWorkImageType) {
+        anchorsInHeaderLatestWorks.css("color", "black");
+        latestWorkImageBlock.sortImages([defaultTypeOfImage, that.attr("class"), dataLatestWorkImageType]);
+        that.css("color", specificRedColor);
+    }
 });
